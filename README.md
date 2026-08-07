@@ -163,11 +163,11 @@ Evaluation metrics: Accuracy, Precision, Recall, F1-Score, ROC-AUC
 For questions about this project, contact:\
 Team Leader: Edusei Mikel Lisamba\
 Email: lisambaedusei@gmail.com\
-Phone: +254100505954\
+Phone: +254100505954
 
 Institution: Open University of Kenya\
 Supervisor: Dr. Irene Sitawa\
-Phone: +254721575114\
+Phone: +254721575114
 
 ---
 
