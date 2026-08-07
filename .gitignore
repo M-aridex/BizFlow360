@@ -3,271 +3,84 @@
 # Team Maridex Capstone Project
 # ============================================================
 
-
-# ------------------------------------------------------------
 # Python
-# ------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-
 *.egg-info/
-.installed.cfg
 *.egg
-MANIFEST
 
-
-# ------------------------------------------------------------
 # Virtual environments
-# ------------------------------------------------------------
 venv/
 env/
 ENV/
 .venv/
-.env/
-env.bak/
-venv.bak/
 
-
-# ------------------------------------------------------------
 # Environment variables and secrets
-# ------------------------------------------------------------
 .env
 .env.*
 !.env.example
-
 *.pem
 *.key
 *.crt
 *.p12
 *.pfx
-
 secrets.toml
 .streamlit/secrets.toml
-config/secrets.yaml
-config/secrets.yml
-deployment/**/.env
-deployment/docker/.env
 
-
-# ------------------------------------------------------------
 # Jupyter
-# ------------------------------------------------------------
 .ipynb_checkpoints/
-*/.ipynb_checkpoints/*
-*.ipynb_checkpoints
 
-
-# ------------------------------------------------------------
-# IDE and editor files
-# ------------------------------------------------------------
+# IDE
 .vscode/
 .idea/
-*.code-workspace
-
 *.swp
 *.swo
-*.swn
 *~
 
-.project
-.classpath
-.settings/
-
-
-# ------------------------------------------------------------
-# Operating system files
-# ------------------------------------------------------------
+# OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 desktop.ini
 
-
-# ------------------------------------------------------------
 # Logs
-# ------------------------------------------------------------
-logs/*.log
 *.log
-logs/*.txt
+logs/
 
-
-# ------------------------------------------------------------
-# Testing, coverage, and linting caches
-# ------------------------------------------------------------
+# Testing and coverage
 .pytest_cache/
 .coverage
-.coverage.*
-coverage.xml
 htmlcov/
 
-.tox/
-.nox/
+# DATA - Ignore actual data files but keep folder structure
+denis_data_eda/raw/*
+denis_data_eda/processed/*
+!denis_data_eda/raw/.gitkeep
+!denis_data_eda/raw/README.md
+!denis_data_eda/processed/.gitkeep
+!denis_data_eda/processed/README.md
+!denis_data_eda/synthetic/
+!denis_data_eda/metadata/
 
-.mypy_cache/
-.ruff_cache/
-.cache
+# MODELS - Ignore trained models but keep metrics
+edusei_ml/models/trained/*
+edusei_ml/models/preprocessing/*
+!edusei_ml/models/trained/.gitkeep
+!edusei_ml/models/preprocessing/.gitkeep
+!edusei_ml/models/metrics/
 
-
-# ------------------------------------------------------------
-# DATA
-# ------------------------------------------------------------
-# Ignore actual raw, external, interim, and processed data files.
-# This is important because MSME financial data may be large,
-# sensitive, proprietary, or protected under KDPA.
-# ------------------------------------------------------------
-
-data/raw/*
-data/external/*
-data/interim/*
-data/processed/*
-
-# Keep folder structure and explanation files
-!data/raw/.gitkeep
-!data/raw/README.md
-
-!data/external/.gitkeep
-!data/external/README.md
-
-!data/interim/.gitkeep
-!data/interim/README.md
-
-!data/processed/.gitkeep
-!data/processed/README.md
-
-# Keep all metadata files
-!data/metadata/
-!data/metadata/**
-
-# Keep synthetic sample data used for testing and demo
-!data/synthetic/
-!data/synthetic/**
-
-# Keep top-level data README
-!data/README.md
-
-
-# ------------------------------------------------------------
-# MODELS
-# ------------------------------------------------------------
-# Ignore trained model binaries and preprocessing artifacts.
-# These can usually be regenerated using training scripts.
-# ------------------------------------------------------------
-
-models/trained/*
-models/preprocessing/*
-
-# Keep placeholders and documentation
-!models/trained/.gitkeep
-!models/trained/README.md
-
-!models/preprocessing/.gitkeep
-!models/preprocessing/README.md
-
-# Keep model metrics because they are useful for Chapter 5:
-# Testing and Results.
-!models/metrics/
-!models/metrics/**
-
-# Keep models README
-!models/README.md
-
-
-# ------------------------------------------------------------
-# Common large binary artifacts
-# ------------------------------------------------------------
-*.sqlite
-*.sqlite3
-*.db
-
+# Large binary files
+*.joblib
 *.pkl
 *.pickle
-
-*.joblib
-
-*.onnx
-*.pt
-*.pth
-*.h5
-*.pb
-*.tflite
-
 *.parquet
 *.feather
-*.arrow
-*.orc
 
-*.npy
-*.npz
-
-
-# ------------------------------------------------------------
-# Reports and generated outputs
-# ------------------------------------------------------------
-# Keep report markdown and small CSVs by default.
-# If figures become very large, you can ignore them later.
-
-# Optional: ignore generated EDA figures but keep .gitkeep
-# reports/eda/figures/*
-# !reports/eda/figures/.gitkeep
-
-# Optional: ignore generated model performance figures but keep .gitkeep
-# reports/model_performance/figures/*
-# !reports/model_performance/figures/.gitkeep
-
-
-# ------------------------------------------------------------
-# Streamlit
-# ------------------------------------------------------------
-# Track config.toml, but ignore secrets.
-.streamlit/secrets.toml
-.streamlit/*.local.toml
-
-
-# ------------------------------------------------------------
-# Docker
-# ------------------------------------------------------------
-deployment/docker/.env
-docker-compose.override.yml
-
-
-# ------------------------------------------------------------
-# Temporary Office files
-# ------------------------------------------------------------
-~$*.docx
-~$*.xlsx
-~$*.pptx
+# Temporary files
 *.tmp
 *.temp
 *.bak
-*.backup
-
-
-# ------------------------------------------------------------
-# Optional ML experiment tracking folders
-# ------------------------------------------------------------
-mlruns/
-wandb/
-lightning_logs/
-tensorboard/
-runs/
