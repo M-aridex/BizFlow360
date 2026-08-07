@@ -151,9 +151,9 @@ Evaluation metrics: Accuracy, Precision, Recall, F1-Score, ROC-AUC
 
 ## 📄 Documentation
 
-**Proposal*: `docs/proposal/`
-**Final Report*: `docs/final_report/`
-**Ethics & Compliance*: `docs/ethics/`
+**Proposal*: `docs/proposal/`\
+**Final Report*: `docs/final_report/`\
+**Ethics & Compliance*: `docs/ethics/`\
 **User Manual*: `docs/user_manual/`
 
 ---
