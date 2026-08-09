@@ -1,0 +1,94 @@
+DATA CLEANING AND FEATURE ENGINEERING NOTES
+============================================
+
+Project:
+SME Financial Distress Prediction Using Machine Learning
+
+Purpose:
+This metadata documents the cleaned datasets prepared for downstream
+machine learning model development, including XGBoost.
+
+1. WORLD BANK DATA
+------------------
+Source:
+World Bank Enterprise Surveys.
+
+The World Bank data contains enterprise-level economic and business
+environment indicators covering multiple countries and years.
+
+The metadata records:
+- Indicator code
+- Indicator name
+- Long definition
+- Topic
+- Periodicity
+- License information
+
+2. KNBS MSME DATA
+-----------------
+Source:
+Kenya National Bureau of Statistics (KNBS)
+2016 Micro, Small and Medium Enterprises Survey.
+
+The MSME dataset contains establishment-level information covering
+business characteristics, finance, revenue, employment, operations,
+performance and business closure.
+
+3. FINANCIAL VARIABLES
+----------------------
+eh01_1:
+Revenue from total sales of goods and services last month.
+
+eh15_1:
+Normal monthly revenue from the business.
+
+eh04_1:
+Estimated net income from the business per month.
+
+eh22_1:
+Estimated total turnover of goods and services in 2015.
+
+4. DATA CLEANING
+----------------
+Negative financial values identified in revenue variables were treated
+as invalid values and converted to missing values before modeling.
+
+Infinite values generated during feature engineering were converted
+to missing values.
+
+5. DERIVED FEATURES
+-------------------
+net_income_margin:
+Net income divided by revenue.
+
+revenue_change_ratio:
+Relationship between current/last-month revenue and normal monthly
+revenue.
+
+business_closed:
+Binary representation of EN01:
+Yes = 1
+No = 0
+
+business_closure_count:
+Number of establishments closed according to EN01b.
+
+6. MODELING PURPOSE
+-------------------
+The cleaned data is intended to be handed over for machine learning
+development.
+
+The downstream modeling stage may include:
+- Feature selection
+- Train/test splitting
+- Missing-value treatment
+- Class imbalance analysis
+- XGBoost training
+- Hyperparameter tuning
+- Model evaluation
+- Feature importance analysis
+- Prediction generation
+
+IMPORTANT:
+The metadata files document the meaning and origin of variables.
+They should be retained together with the cleaned datasets.

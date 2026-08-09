@@ -1,0 +1,8 @@
+Feature,Description,Source
+eh01_1_clean,Cleaned revenue from total sales of goods and services last month (KSh),KNBS MSME Survey
+eh15_1_clean,Cleaned normal monthly business revenue (KSh),KNBS MSME Survey
+eh04_1_clean,Cleaned monthly net income from the business (KSh),KNBS MSME Survey
+net_income_margin,Net income relative to revenue,Derived from KNBS MSME variables
+revenue_change_ratio,Current/normal revenue relationship,Derived from KNBS MSME variables
+business_closed,Binary indicator showing whether the business closed an establishment in the past five years,KNBS MSME Survey EN01
+business_closure_count,Number of establishments closed in the past five years,KNBS MSME Survey EN01b
