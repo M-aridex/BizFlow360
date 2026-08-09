@@ -1,0 +1,480 @@
+Variable,Label
+key3,Business owner id(to identify the owner/s training section 'ee'
+key2,Unique Submission ID for the Establishment
+ls_index,Business owner line number
+a_41,Please enter the Business ID.
+county11,
+eb01_1,Section 
+eb01_2,EB01_2 Please select the ISIC Division.
+eb03,EB03 Where is the business located?
+eb04,EB04 How appropriate is the site with regards to getting customers?
+eb05,EB05 What is the biggest risk of tenancy to this business site?
+eb06,EB06 Who provides security for your business?
+eb07,EB07 What is the type of the main structure?
+eb08,EB08 What is the nature of ownership of this business site?
+eb09,EB09 What is the nature of Occupancy of this business?
+eb10,EB10 Please enter the number of months per year
+eb11,EB11 Please enter the number of days per week
+eb12,EB12 Please enter the number of hours per day
+eb13,EB13 Please enter the number of businesses
+eb14_1,Section 
+eb14_2,EB14_2 Please select the ISIC Division.
+eb15,EB15 Please enter the number of businesses
+eb16_1,EB16 Who is the main decision maker for this business?
+eb17,EB17 Has your business changed its main activity in the last 12 months?
+eb18_1,Section 
+eb18_2,EB18_2 Please select the ISIC Division.
+eb19,EB19 Why did you change from your previous business?
+ec01,EC01 How many male working owners are there in the business?
+ec02,EC02 How many female working owners are there in the business?
+hhe_fulltime,Does the business employ any FULL TIME PAID employees?
+ec03,EC03 Number of full time paid employees - Male - 5 - 12 years
+ec04,EC04 Number of full time paid employees - Female - 5 - 12 years
+ec05,EC05 Number of full time paid employees - Male -13 - 15 years
+ec06,EC06 Number of full time paid employees - Female-13 - 15 years
+ec07,EC07 Number of full time paid employees - Male -16 - 17 years
+ec08,EC08 Number of full time paid employees - Female-16 - 17 years
+ec09,EC09 Number of full time paid employees - Male - 18-35 years
+ec10,EC10 Number of full time paid employees - Female - 18-35 years
+ec11,EC11 Number of full time paid employees - Male - 36+ years
+ec12,EC12 Number of full time paid employees - Female - 36+ years
+hhe_unpaid_fam,Does the business employ any UNPAID FAMILY workers?
+ec13,EC13 Number of unpaid family workers - Male- 5 - 12 years
+ec14,EC14 Number of unpaid family workers - Female- 5 - 12 years
+ec15,EC15 Number of unpaid family workers - Male -13 - 15 years
+ec16,EC16 Number of unpaid family workers - Female -13 - 15 years
+ec17,EC17 Number of unpaid family workers - Male -16 - 17 years
+ec18,EC18 Number of unpaid family workers - Female -16 - 17 years
+ec19,EC19 Number of unpaid family workers - Male- 18-35 years
+ec20,EC20 Number of unpaid family workers - Female - 18-35 years
+ec21,EC21 Number of unpaid family workers - Male- 36+ years
+ec22,EC22 Number of unpaid family workers - Female - 36+ years
+hhe_apprentice,"Does the business employ any ATTACHEES, INTERNS OR APPRENTICE workers?"
+ec23,EC23 Number of apprentices - Male- 5 - 12 years
+ec24,EC24 Number of apprentices - Female- 5 - 12 years
+ec25,EC25 Number of apprentices - Male-13 - 15 years
+ec26,EC26 Number of apprentices - Female-13 - 15 years
+ec27,EC27 Number of apprentices - Male-16 - 17 years
+ec28,EC28 Number of apprentices - Female-16 - 17 years
+ec29,EC29 Number of apprentices - Male - 18-35 years
+ec30,EC30 Number of apprentices - Female- 18-35 years
+ec31,EC31 Number of apprentices - Male - 36+ years
+ec32,EC32 Number of apprentices - Female- 36+ years
+hhe_parttime,Does the business employ any PART TIME REGULAR workers?
+ec33,EC33 Number of part-time regular employees - Male- 5 - 12 years
+ec34,EC34 Number of part-time regular employees - Female - 5 - 12 years
+ec35,EC35 Number of part-time regular employees - Male-13 - 15 years
+ec36,EC36 Number of part-time regular employees - Female -13 - 15 years
+ec37,EC37 Number of part-time regular employees - Male-16 - 17 years
+ec38,EC38 Number of part-time regular employees - Female -16 - 17 years
+ec39,EC39 Number of part-time regular employees - Male- 18-35 years
+ec40,EC40 Number of part-time regular employees - Female - 18-35 years
+ec41,EC41 Number of part-time regular employees - Male- 36+ years
+ec42,EC42 Number of part-time regular employees - Female - 36+ years
+ec43,EC43 Average hours worked per week - Male- 5 - 12 years
+ec44,EC44 Average hours worked per week - Female - 5 - 12 years
+ec45,EC45 Average hours worked per week - Male -13 - 15 years
+ec46,EC46 Average hours worked per week - Female -13 - 15 years
+ec47,EC47 Average hours worked per week - Male -16 - 17 years
+ec48,EC48 Average hours worked per week - Female -16 - 17 years
+ec49,EC49 Average hours worked per week - Male - 18-35 years
+ec50,EC50 Average hours worked per week - Female - 18-35 years
+ec51,EC51 Average hours worked per week - Male - 36+ years
+ec52,EC52 Average hours worked per week - Female - 36+ years
+hhe_casual,Does the business employ any CASUAL workers?
+ec53,EC53 Number of casual employees - Male - 5 - 12 years
+ec54,EC54 Number of casual employees - Female - 5 - 12 years
+ec55,EC55 Number of casual employees - Male -13 - 15 years
+ec56,EC56 Number of casual employees - Female -13 - 15 years
+ec57,EC57 Number of casual employees - Male -16 - 17 years
+ec58,EC58 Number of casual employees - Female -16 - 17 years
+ec59,EC59 Number of casual employees - Male - 18-35 years
+ec60,EC60 Number of casual employees - Female - 18-35 years
+ec61,EC61 Number of casual employees - Male - 36+ years
+ec62,EC62 Number of casual employees - Female - 36+ years
+ec63,EC63 Enter the number of unionisable employees
+ec64,EC64 How do you resolve labour disputes?
+ec65,EC65 Type of safety measures at the work place
+ec65_1,
+ec65_2,
+ec65_3,
+ec65_4,
+ec66,EC66 What is the main method of recruiting persons under 18 years?
+ec66_1,EC66_1 What is the secondary method of recruiting persons under 18 years?
+hhe_schoolhalf,Does the business employ any workers that ATTEND SCHOOL FOR HALF A DAY?
+ec67,EC67 Number of workers attending school - half day - Male - 5 - 12 years
+ec68,EC68 Number of workers attending school - half day - Female - 5 - 12 years
+ec69,EC69 Number of workers attending school - half day - Male -13 - 15 years
+ec70,EC70 Number of workers attending school - half day - Female -13 - 15 years
+ec71,EC71 Number of workers attending school - half day - Male -16 - 17 years
+ec72,EC72 Number of workers attending school - half day - Female -16 - 17 years
+ec73,C73 Number of workers attending school - half day - Male - 18+ years
+ec74,C74 Number of workers attending school - half day - Female - 18+ years
+hhe_schoolfull,Does the business employ any workers that ATTEND SCHOOL FOR A FULL DAY?
+ec75,EC75 Number of workers attending school - full day - Male - 5 - 12 years
+ec76,EC76 Number of workers attending school - full day - Female - 5 - 12 years
+ec77,EC77 Number of workers attending school - full day - Male -13 - 15 years
+ec78,EC78 Number of workers attending school - full day - Female -13 - 15 years
+ec79,EC79 Number of workers attending school - full day - Male -16 - 17 years
+ec80,EC80 Number of workers attending school - full day - Female -16 - 17 years
+ec81,EC81 Number of workers attending school - full day - Male - 18+ years
+ec82,EC82 Number of workers attending school - full day - Female - 18+ years
+ec83,EC83 Please enter the number of persons the enterprise engages aged:- 5 - 12 yea
+ec85,EC85 Please enter the number of persons the enterprise engages aged: -13 - 15 ye
+ec87,EC87 Please enter the number of persons the enterprise engages aged: 16 - 17 yea
+ec89,EC89 Please enter the number of persons the enterprise engages aged: 18-35 years
+ec90_1,EC90_1 Please enter the number of persons the enterprise engages aged: 36+ years
+ec91,EC91 Do you provide training for working persons under 18 years of age? And if s
+ec92,EC92 Payment of Training for working persons under 18 years of age
+hhe_extraprod,Does the business employ any workers in the HIGH SEASON or to meet EXTRA PRODUCT
+ec93,EC93 How many workers do you engage during high season or to meet extra producti
+ec95,EC95 How many workers do you engage during high season or to meet extra producti
+ec97,C103 How many workers do you engage during high season or to meet extra producti
+ec99,C104 How many workers do you engage during high season or to meet extra producti
+ec94,EC93_1 How many workers do you engage during high season or to meet extra produc
+ec96,C103 How many workers do you engage during high season or to meet extra producti
+ec98,C103_1 How many workers do you engage during high season or to meet extra produc
+ec100,C104_1 How many workers do you engage during high season or to meet extra produc
+ec101,C105 What is the main reason for using persons aged 5 - 17 yrs?
+ed01,ED01 Number of MALE EMPLOYEES at the START of the establishment
+ed02,ED02 Number of FEMALE EMPLOYEES at the START of the establishment
+hhm_name_301,How many persons own /co-own/manage this establishment?
+edchk,What are the highest educational qualifications of your employees?
+ef01_1,EF01_1 None
+ef01_2,EF01_2 CPE/KCPE
+ef01_3,EF01_3 KCE/KCSE
+ef01_4,EF01_4 KJSE
+ef01_5,EF01_5 KACE/EAACE
+ef01_6,EF01_6 Certificate
+ef01_7,EF01_7 Diploma
+ef01_8,EF01_8 Higher Diploma
+ef01_9,EF01_9 Degree
+ef01_10,EF01_10 Post Graduate Diploma
+ef01_11,EF01_11 Post Graduate Degree
+ef01_12,EF01_12 Other (Specify)
+vcchk,What are the highest vocational/proffessional qualifications of your employees?
+ef02_1,EF02_1 None
+ef02_2,EF02_2 Artisan grade 1
+ef02_3,EF02_3 Artisan grade 2
+ef02_4,EF02_4 Artisan grade 3
+ef02_5,EF02_5 KATC
+ef02_6,EF02_6 CPA / CPS
+ef02_7,EF02_7 Teaching
+ef02_8,EF02_8 Nursing
+ef02_9,EF02_9 Computer packages
+ef02_10,EF02_10 Diploma
+ef02_11,EF02_11 Degree
+ef02_12,EF02_12 Post Graduate Diploma
+ef02_13,EF02_13 Post Graduate Degree
+ef02_14,EF02_14 Other (Specify)
+b_01,B_01 Do you have any employee who has undergone training in relation to their jo
+emp_trained_i,Please enter the number of employees
+vdchk,What types of trainings have the employees received?
+ef03_1,EF03_1 Management
+ef03_2,EF03_2 Technical/Advice
+ef03_3,EF03_3 Marketing
+ef03_4,EF03_4 Information Technology (ICT)
+ef03_5,EF03_5 Informal Advice/training
+ef03_6,EF03_6 Consultancy Advice
+ef03_7,EF03_7 Business Counseling
+ef03_8,EF03_8 Finance & Accounting
+ef03_12,EF03_12 Other (specify)
+ef04_1,EF04_1 Management
+ef04_2,EF04_2 Technical/Advice
+ef04_3,EF04_3 Marketing
+ef04_4,EF04_4 Information Technology (ICT)
+ef04_5,EF04_5 Informal Advice/training
+ef04_6,EF04_6 Consultancy Advice
+ef04_7,EF04_7 Business Counseling
+ef04_8,EF04_8 Finance & Accounting
+ef04_12,EF04_12 Other (specify)
+ef05_1,EF05_1 Management
+ef05_2,EF05_2 Technical/Advice
+ef05_3,EF05_3 Marketing
+ef05_4,EF05_4 Information Technology (ICT)
+ef05_5,EF05_5 Informal Advice/training
+ef05_6,EF05_6 Consultancy Advice
+ef05_7,EF05_7 Business Counseling
+ef05_8,EF05_8 Finance & Accounting
+ef05_12,EF05_12 Other (specify)
+ef06,EF06 What is the MOST important Type of training required by the employees?
+ef07,EF07 What is the 2ND MOST important Type of training required by the employees?
+ef08,EF08 What is the 3RD MOST important Type of training required by the employees?
+eg01_1,EG01 What has been the establishment's expenditure on Goodwill
+eg02_2,EG02 In which year did the business pay goodwill?
+eg03_1,EG03 What is the establishment's monthly expenditure on Rent
+eg04_1,EG04 What is the establishment's monthly expenditure on NSSF/Health Insurance
+eg05_1,EG05 What is the establishment's monthly expenditure on Electricity
+eg06_1,EG06 What is the establishment's monthly expenditure on Water
+eg07_1,EG07 What is the establishment's monthly expenditure on Telephone usage
+eg08_1,EG08 What is the establishment's monthly expenditure on Internet Costs
+eg09_1,EG09 What is the establishment's monthly expenditure on Insurance (Business)
+eg10_1,EG10 What is the establishment's monthly expenditure on Credit (interest and oth
+eg11_1,EG11 What is the establishment's monthly expenditure on Salaries and Wages
+eg12_1,EG12 What is the establishment's monthly expenditure on Purchases of business wa
+eg13_1,EG13 What is the establishment's monthly expenditure on Purchases of inputs and 
+eg14_1,EG14 What is the establishment's monthly expenditure on Transport/storage and wa
+eg15_1,EG15 What is the establishment's monthly expenditure on Repairs/ maintenance
+eg16_1,EG16 What is the establishment's monthly expenditure on Licenses issued
+eg17_1,EG17 What is the establishment's monthly expenditure on Fines
+eg18_1,EG18 What is the establishment's monthly expenditure on Taxes
+eg19_1,EG19 What is the establishment's monthly expenditure on Advertising
+eg20_1,EG20 What is the establishment's monthly expenditure on Product innovation
+eg21_1,EG21 What is the establishment's monthly expenditure on Process innovation
+eg22_1,EG22 What is the establishment's monthly expenditure on Social Responsibility
+eg23_1,EG23 What is the establishment's monthly expenditure on Office supplies
+eg24_1,EG24 What is the establishment's monthly expenditure on Additional Equipment and
+eg25_1,EG25 What is the establishment's monthly expenditure on Other operating costs
+eh01_1,EH01 What was the revenue from total sales of goods and services last month (KSh
+eh02_1,EH02 What was the value of stocks (For non-service enterprises) at the beginning
+eh03_1,EH03 What was the value of stocks (For non-service enterprises) at the end of la
+eh04_1,EH04 In your opinion what is the net income from the business per month?
+eh06,EH06 What is the MOST important use of net income from the business?
+eh07,EH07 What is the 2nd MOST important use of net income from the business?
+eh08,EH08 What is the 3rd MOST important use of net income from the business?
+eh09,EH09 How do you rank your business performance in the last one month?
+eh10,EH10 Good (above average)
+eh11,EH11 Normal
+eh12,EH12 Bad (below average)
+eh13,"EH13 Compared to normal what is a good performance (1½,2,3,4 etc. times normal "
+eh14,"EH14 Compared to normal what is a bad performance (1/4,1/2,3/4 etc. times normal"
+eh15_1,EH15 How much is normal monthly revenue from the business. (KShs.)
+eh16,EH16 Which is the best month of the business?
+eh17,EH17 Which is the worst month of the business?
+eh18,EH18 Was the last 3 months Period better or worse?
+eh19,"EH19 During the period 2013 to 2015, did you introduce new or significantly impr"
+eh20,"EH20 During the period 2013 to 2015, did you introduce new or significantly impr"
+eh21,"EH21 During the period 2013 to 2015, did you implement a new marketing method in"
+eh22_1,EH22 Please estimate the total turnover of goods and services in ( KSh) in 2015 
+ej01,EJ01 What was the main reason for starting the business?
+ej02,EJ02 What was the main reason for choosing this particular activity?
+ej03_1,EJ03 What is the MOST important Non-financial assistance received in the last 4 
+ej03_2,EJ03 What is the 2nd MOST important Non-financial assistance received in the las
+ej04_1,EJ04 What is the MOST important Kind of non-financial assistance needed?
+ej04_2,EJ04 What is the 2nd MOST important Kind of non-financial assistance needed?
+ej05,EJ05 Which support group(s) do you belong to in relation to this business?
+ej05x_1,MSEs associations
+ej05x_2,Chamber of Commerce
+ej05x_3,Other Business
+ej05x_4,Merry-go- round
+ej05x_5,ROSCAs
+ej05x_6,Men/Women Association
+ej05x_0,None
+ej05x_96,Other (Specify)
+ej06,EJ06 Which business records do you keep?
+ej06x_0, None
+ej06x_1, Cash sales and receipts
+ej06x_2, Sales day book and monthly sales ledger
+ej06x_3, Purchases day book & monthly purchases ledger
+ej06x_4, Cashbook and petty cashbook 
+ej06x_6, Bank reconciliation statements
+ej06x_7, Complete set of accounts
+ej06x_8, External Accountancy Services
+ej06x_9,Personal notes
+ej06x_96,Other (Specify)
+no_reports1,
+no_reports2,
+ej07,EJ07 What reports do you generate from your business records?
+ej07a_1,
+ej07a_2,
+ej07a_3,
+ej07a_4,
+ej07a_5,
+ej08_1,EJ08 Approximately how many hours per week do you spend to generate those report
+ej09,EJ09 What type of bank account (s) do you have for the business?
+ej09a_1,
+ej09a_2,
+ej09a_3,
+ej09a_4,
+ej10,EJ10 Do you use Mobile Money Platform in your establishment ?
+ej11,EJ11 Does your business have a pay bill/ till number ?
+ej12,EJ12 In which ways do you use mobile money transfer in your business?
+ej12x_1, Pay for goods & services
+ej12x_2, Receive payments
+ej12x_3, Banking
+ej12x_0,N / A (do not use)
+ej12x_96,Other (Specify)
+ej12x_98,Don't Know
+ej12x_99,Refused To Respond
+ej13,EJ13 What is the sex of the owners of the business
+ej14,EJ14 What is the Type of ownership structure of this business?
+ej15,EJ15 Is the Business Registered by registrar of companies?
+ej17,EJ17 How are prices set ?
+ej18,EJ18 What is the Main source of inputs / purchases ?
+ej18_2,EJ18_2 What was the corresponding value of the inputs / purchases in 2015?
+ej19,EJ19 Who is the Main buyer of products or services ?
+ej19_2,EJ19_2 What was the corresponding value of the products / services in 2015?
+ej20,EJ20 What contracting arrangements for inputs or orders received from clients do
+ej21,EJ21 What contracted arrangement for your products or services does the business
+ej22_1,EJ22 What is the primary method of advertisement of products and services
+ej22_2,EJ22_2 What is the Secondary method of advertisement of products and services
+ej23_1,EJ23 What is your primary customer feedback mechanism?
+ej23_2,EJ23_2 What is your secondary customer feedback mechanism?
+ek01,EK01 What is your Main source of water?
+ek01_2,EK01_2
+ek02,EK02 Do you have access to a piped water ?
+ek03,EK03 What is the distance to the nearest water pipeline?
+ek04,EK04 Are you connected to piped water?
+ek05,EK05 Have you applied for connection?
+ek06,EK06 Give reasons why you have not applied for a connection
+ek07,EK07 Give reasons for non-connection despite having applied for a connection
+ek08,EK08 Do you have access to Electricity?
+ek09,EK09 Is your establishment connected to electricity?
+ek10,EK10 Have you applied for an electricity connection?
+ek11,EK11 Give reasons for non-connection despite having applied for a connection
+ek12,EK12 Give reasons why you have not applied for a connection
+ek13,EK13 Did your establishment have a dedicated fixed / landline telephone for busi
+ek14,EK14 Did your enterprise have a dedicated mobile telephone for business during t
+ek15a,EK15a From which mobile service provider do you get sufficient network signal?
+ek15a1_1,
+ek15a1_2,
+ek15a1_3,
+ek15a1_4,
+ek15a1_5,
+ek15b,EK15b For what purposes do you use the mobile phone?
+ek16,EK16 Did your enterprise use a computer for official purpose(s) during the year 
+ek17,EK17 What was the computer used for?
+ek17a_1,
+ek17a_2,
+ek17a_3,
+ek17a_4,
+ek17a_5,
+ek17a_6,
+ek18,EK18 What is the purpose of internet use?
+ek18a_1,
+ek18a_2,
+ek18a_3,
+ek18a_4,
+ek18a_5,
+ek18a_6,
+ek19,EK19 Did your establishment seek the following government services via internet 
+ek19a_1,
+ek19a_2,
+ek19a_3,
+ek19a_4,
+ek19a_5,
+ek19a_6,
+ek19a_7,
+ek19a_8,
+ek20,EK20 Did your establishment have an active website in 2015?
+ek21,EK21 What type of roads do you use to access your business?
+ek22,EK22 What state are the roads you use to access your business?
+ek23,EK23 What type of Toilet facilities do you access at your business?
+ek24,EK24 What is the mode of solid waste (Garbage) disposal at your business?
+ek25,EK25 What is the mode of effluent disposal at your business?
+el01,EL01 How much initial capital was invested in the business?
+el02,EL02 What was the main source of initial capital?
+el03,EL03 How much additional capital was invested after the start of the establishme
+el04,EL04 What was the establishment's MAIN source of additional capital?
+el05,EL05 Please estimate the approximate current gross worth of the business
+el06_1,EL06_1 What was the MOST important other type of support received?
+el06_2,EL06_2 What was the 2nd MOST important other type of support received?
+el06_3,EL06_3 What was the 3rd MOST important other type of support received?
+el07,EL07 What has been the source of technological advice?
+el08,EL08 Does the business have any of the following types of ICT equipment?
+el08x_0,None
+el08x_1,Mobile Phone
+el08x_2,Computer
+el08x_3,Tablets / Phablets
+el08x_4,Digital / Video Cameras
+el08x_5,Radio
+el08x_6,Television set
+el08x_7,Fax
+el08x_8,Photocopier
+el08x_9,Printer
+el08x_96,Other (Specify)
+el09,EL09 What is the main reason why the business does not use ICT ?
+el10,EL10 Electrically operated
+el11,EL11 Fuel Using
+el12,EL12 Human Powered
+el13,EL13 Animal Powered
+machine_check,
+el15,EL15 Main Sources of electrically operated machines and equipment
+el16,EL16 Main Sources of fuel using machines and equipment
+el17,EL17 Main Sources of human powered machines and equipment.
+el18,EL18 Main Sources of animal powered machines and equipment
+el19,EL19 Electrically operated
+el20,EL20 Fuel Using
+el21,EL21 Human Powered
+el22,EL22 Animal Powered
+el23,EL23 Electrically operated
+el24,EL24 Fuel Using
+el25,EL25 Human Powered
+el26,EL26 Animal Powered
+em01,EM01 Did you apply for credit in the last three years?
+em02,EM02 How much did you apply for in (KSh)?
+em03,EM03 How much did you receive?
+em04,EM04 What was the main credit source?
+em05,EM05 What was the main Purpose of Credit ?
+em06a,EM06a Was the credit adequate ?
+em06b,EM06b Why was the amount of credit inadequate?
+em07,EM07 What was main source of information on credit?
+em08a,"EM08a During the last 12 months, did you attempt to borrow some money?"
+em08b,EM08b Was your credit application turned down?
+em09,EM09 Who turned you down?
+em10_1,EM10_1 What was the MOST important reason why you did not attempt to borrow in t
+em10_2,EM10_2 What was the 2nd MOST important reason why you did not attempt to borrow 
+em10_3,EM10_3 What was the 3rd MOST important reason why you did not attempt to borrow 
+em11,EM11 Does the business run a business account?
+em12,EM12 in what type of institution is the business account?
+em13,EM13 What was the MOST serious constraint to your business in the last one year 
+em14,EM14 What was the 2nd MOST serious constraint to your business in the last one y
+em15,EM15 What was the 3rd MOST serious constraint to your business in the last one y
+constraint_1,
+constraint_2,
+constraint_3,
+em16,EM16 What was the degree of the severity of constraint 1 - ${constraint_1}
+em17,EM17 What was the degree of the severity of constraint 2 - ${constraint_2}
+em18,EM18 What was the degree of the severity of constraint 3 - ${constraint_3}
+em19,EM19 What is a perceived solutions to constraint 1 - ${constraint_1}
+em20,EM20 What is a perceived solutions to constraint 2 - ${constraint_2}
+em21,EM21 What is a perceived solutions to constraint 3 - ${constraint_3}
+en01,"Over the past five years, HAVE YOU closed any income-generating establishments t"
+en01b,EN01b How many income-generating establishments have you closed in the past 5 ye
+setofclosed_enterprise1,SET-OF-closed_enterprise1
+eb02,EB02 Date business was started or acquired?
+ec84,EC84 Date started engaging persons aged- 5 - 12 years
+ec86,EC86 Date started engaging persons aged -13 - 15 years
+ec88,EC88 Date started engaging persons aged -16 - 17 years
+ec90,EC90 Date started engaging persons aged - 18-35 years
+ec90_2,EC90_2 Date started engaging persons aged -36+ years
+_merge_1,
+_merge_wgt1,
+est_wgt,Establishment Weight
+_merge_wgt2,
+merge_isic,
+_merge_isic_eb01,
+_merge_isic_eb14,
+_merge_isic_eb18,
+chk2,
+chk3,
+chk4,
+chk5,
+chk6,
+ee01,EE01 What is the highest level of education completed by ${name_empl2}?
+ee01_1,EE01_1 In which year did ${name_empl2} complete this highest level?
+ee02,EE02 What is the highest education qualification completed by ${name_empl2}?
+ee03,EE03 What other vocational/ Proffessional training has ${name_empl2} attained?
+ee04,EE04 Which type of Institution has ${name_empl2} attended?
+train_number,Please enter the number of different types of training
+ee05,EE05 What was ${name_empl2}'s MOST important type of training received?
+ee06,EE06 What was the duration of this training?
+ee07,EE07 What type of institution did ${name_empl2} undertake this training?
+ee08,EE08 Who sponsored this training?
+ee09,EE09 What was ${name_empl2}'s 2nd MOST important type of training received?
+ee10,EE10 What was the duration of this training?
+ee11,EE11 What type of institution did ${name_empl2} undertake this training?
+ee12,EE12 Who sponsored this training?
+ee13,EE13 What was ${name_empl2} 3rd MOST important type of training received?
+ee14,EE14 What was the duration of this training?
+ee15,EE15 What type of institution did ${name_empl2}'s undertake this training?
+ee16,EE16 Who sponsored this training?
+ee17,EE17 What is the MOST important type of training required by ${name_empl2} ?
+ee18,EE18 What is the 2nd MOST important type of training required by ${name_empl2} 
+_merge_emp1,
+_merge_emp,
+total_employees,
+total_emply,
+total_males_emp,
+total_females_emp,
+tot_exp,
