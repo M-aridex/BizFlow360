@@ -1,0 +1,64 @@
+{
+  "version": "2.1",
+  "trained_at": "2026-08-10 19:24",
+  "model": "LightGBM (tuned) + sigmoid calibration",
+  "best_params": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "num_leaves": 31,
+    "scale_pos_weight": 1.0
+  },
+  "operating_threshold_max_f1": 0.33,
+  "operating_threshold_recall60": 0.375,
+  "metrics_test": {
+    "accuracy": 0.5941,
+    "precision": 0.4652,
+    "recall": 0.7455,
+    "f1": 0.5729,
+    "roc_auc": 0.6957,
+    "pr_auc": 0.5776,
+    "brier": 0.2059,
+    "roc_auc_ci95": [
+      0.6762,
+      0.7139
+    ],
+    "brier_ci95": [
+      0.2005,
+      0.211
+    ]
+  },
+  "features": [
+    "county",
+    "sector",
+    "male_working_owners",
+    "female_working_owners",
+    "total_monthly_expenses",
+    "monthly_rent_expense",
+    "monthly_electricity_expense",
+    "monthly_credit_expense",
+    "monthly_social_responsibility_expense",
+    "revenue_last_month",
+    "normal_monthly_revenue",
+    "stock_value_beginning",
+    "stock_value_end",
+    "total_turnover_2015",
+    "revenue_change_ratio",
+    "business_closed",
+    "number_closed_establishments",
+    "revenue_decline",
+    "low_revenue",
+    "expense_to_revenue",
+    "stock_change",
+    "turnover_missing",
+    "revenue_missing"
+  ],
+  "engineered_features": {
+    "revenue_change_ratio": "clip(last/normal, 0, 20)",
+    "expense_to_revenue": "clip(expenses/max(revenue,1), 0, 10)",
+    "stock_change": "clip((end-begin)/max(begin,1), -1, 5)",
+    "turnover_missing": "1 if turnover missing or == 288000 placeholder",
+    "revenue_missing": "1 if revenue missing"
+  },
+  "leakage_policy": "Profitability features excluded from predictor (v2 audit: delta-AUC 0.012)."
+}

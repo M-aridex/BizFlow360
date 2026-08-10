@@ -73,6 +73,8 @@ edusei_ml/models/preprocessing/*
 !edusei_ml/models/preprocessing/.gitkeep
 !edusei_ml/models/metrics/
 
+.streamlit/secrets.toml
+
 # Large binary files
 *.joblib
 *.pkl
@@ -84,3 +86,12 @@ edusei_ml/models/preprocessing/*
 *.tmp
 *.temp
 *.bak
+
+# BizFlow360 safety
+venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+bizflow_history.json
+chat_sessions.json
+.DS_Store

@@ -1,0 +1,4 @@
+set,accuracy,precision,recall,f1,roc_auc,brier
+FULL_incl_profitability,0.6851,0.6124,0.3749,0.4651,0.7023,0.2036
+LEAKAGE_SAFE,0.6835,0.6199,0.3446,0.443,0.6902,0.2072
+LEAKAGE_SAFE_CALIBRATED (production),0.6804,0.6412,0.2831,0.3928,0.6962,0.2061

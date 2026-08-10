@@ -173,7 +173,7 @@ Phone: +254721575114
 
 ## 📜 License
 
-This project is developed for academic purposes as part of the BSc Data Science capstone requirement.
+This project is developed for academic purposes as part of the BSc Data Science capstone requirement, at the Open University of Kenya.
 
 Financial clarity for every MSME. 💡
 

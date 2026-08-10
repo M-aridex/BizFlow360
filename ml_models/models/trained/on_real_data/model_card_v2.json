@@ -1,0 +1,58 @@
+{
+  "version": "2.0",
+  "trained_at": "2026-08-10 19:00",
+  "model": "LightGBM, Platt-sigmoid calibrated (5-fold)",
+  "label_provenance": "Target = KNBS question eh09, owner self-reported performance 'Bad'. The label is NOT computed from any financial feature, so there is no direct definitional leakage.",
+  "leakage_policy": "Profitability-derived features (net_income_last_month, net_income_margin, zero_or_missing_net_income) are EXCLUDED from the predictor. They are used only by the advice engine in the app.",
+  "production_feature_set": "LEAKAGE_SAFE (19 features)",
+  "metrics": [
+    {
+      "set": "FULL_incl_profitability",
+      "accuracy": 0.6851,
+      "precision": 0.6124,
+      "recall": 0.3749,
+      "f1": 0.4651,
+      "roc_auc": 0.7023,
+      "brier": 0.2036
+    },
+    {
+      "set": "LEAKAGE_SAFE",
+      "accuracy": 0.6835,
+      "precision": 0.6199,
+      "recall": 0.3446,
+      "f1": 0.443,
+      "roc_auc": 0.6902,
+      "brier": 0.2072
+    },
+    {
+      "set": "LEAKAGE_SAFE_CALIBRATED (production)",
+      "accuracy": 0.6804,
+      "precision": 0.6412,
+      "recall": 0.2831,
+      "f1": 0.3928,
+      "roc_auc": 0.6962,
+      "brier": 0.2061
+    }
+  ],
+  "feature_meanings": {
+    "County": "Typical distress rate of businesses in this county in the KNBS data.",
+    "Sector": "How businesses in this sector performed nationally.",
+    "Male Owners": "Number of active male owners (management depth).",
+    "Female Owners": "Number of active female owners (management depth).",
+    "Total Monthly Expenses": "Your monthly cost base.",
+    "Monthly Rent": "Rent component of your costs.",
+    "Monthly Electricity": "Electricity component of your costs.",
+    "Monthly Credit Payments": "Loan/credit repayments inside your costs.",
+    "Monthly Social Responsibility": "Community/social contributions inside your costs.",
+    "Revenue Last Month": "Actual sales last month.",
+    "Normal Monthly Revenue": "Your typical monthly sales.",
+    "Stock (Beginning)": "Inventory value at month start.",
+    "Stock (End)": "Inventory value at month end (sales velocity signal).",
+    "Annual Turnover": "Yearly business size benchmark.",
+    "Revenue Change Ratio": "Last month's revenue divided by normal revenue (trend).",
+    "Closed Any Establishment": "Whether you closed a branch in the last 5 years.",
+    "Number Closed": "How many branches were closed.",
+    "Revenue Declined": "Your own confirmation that revenue is falling.",
+    "Low Revenue Flag": "Micro-scale business flag (revenue below KES 10,000)."
+  }
+}
