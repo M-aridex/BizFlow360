@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BizFlow360 — Capstone Presentation | Team Maridex · Open University of Kenya</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{ box-sizing:border-box; }
+:root{
+  --navy:#0d2c54; --navy2:#123c7a; --blue:#1e88e5; --teal:#00897b;
+  --green:#58b368; --lime:#8bc34a; --ink:#16233a; --muted:#5b6b82;
+  --card:#ffffff; --line:#e3e9f2;
+  --grad:linear-gradient(90deg,var(--blue),var(--teal),var(--green));
+}
+
+/* ============ BACKGROUNDS ============ */
+.reveal-viewport{
+  background:
+    radial-gradient(1100px 560px at 88% -12%, rgba(30,136,229,.15), transparent 60%),
+    radial-gradient(950px 520px at -8% 112%, rgba(88,179,104,.17), transparent 62%),
+    linear-gradient(135deg,#fbfcff 0%, #f4faf7 55%, #fafcf3 100%);
+}
+section:not(.darkbg)::before{
+  content:""; position:absolute; top:-130px; right:-130px; width:360px; height:360px;
+  background:radial-gradient(circle at 30% 30%, rgba(30,136,229,.14), transparent 65%);
+  border-radius:50%; pointer-events:none;
+}
+section:not(.darkbg)::after{
+  content:""; position:absolute; bottom:-150px; left:-150px; width:400px; height:400px;
+  background:radial-gradient(circle at 60% 40%, rgba(88,179,104,.13), transparent 65%);
+  border-radius:50%; pointer-events:none;
+}
+section.darkbg{
+  background:
+    radial-gradient(900px 480px at 92% -18%, rgba(139,195,74,.28), transparent 60%),
+    radial-gradient(760px 440px at -12% 112%, rgba(30,136,229,.38), transparent 62%),
+    linear-gradient(135deg,#081c3a 0%, #0d2c54 42%, #00695c 100%);
+  color:#eaf2ff;
+}
+section.darkbg h1,section.darkbg h2,section.darkbg h3{ color:#fff; }
+section.darkbg .kicker{ color:var(--lime); }
+section.darkbg .rule{ background:linear-gradient(90deg,var(--lime),var(--blue)); }
+section.darkbg ul li::before{ color:var(--lime); }
+section.darkbg .muted{ color:#b9c8e0; }
+
+/* Title slide: background ON the section so text always paints above it */
+section.titleslide{
+  background:
+    linear-gradient(rgba(251,252,255,.82), rgba(251,252,255,.93)),
+    url('https://image.qwenlm.ai/public_source/f64408c1-4def-4332-891b-051d54fd3e7d/034c64b6f-2df2-4b7e-aee3-2297496240f02594.png') center/cover;
+}
+
+/* ============ NAVY RING ============ */
+.reveal .slides section{ padding:26px 42px 30px; }
+.ring{
+  position:absolute; inset:7px; border:3px solid var(--navy); border-radius:30px;
+  pointer-events:none; z-index:30;
+}
+section.darkbg .ring{
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.25), 0 0 0 1px rgba(255,255,255,.10);
+}
+
+/* ============ TYPOGRAPHY ============ */
+.reveal{ font-family:'Manrope',sans-serif; color:var(--ink); }
+.reveal h1,.reveal h2,.reveal h3,.reveal h4{
+  font-family:'Fraunces',serif; color:var(--navy); text-transform:none; letter-spacing:0;
+}
+.reveal .slides{ text-align:left; }
+.reveal .slides section.center{ text-align:center; }
+.reveal h1{ font-size:1.95em; font-weight:800; margin:.1em 0 .06em; }
+.reveal h2{ font-size:1.1em; font-weight:700; margin:.1em 0 .06em; }
+.reveal p,.reveal li{ font-size:.5em; line-height:1.5; }
+.reveal ul{ list-style:none; margin:0; }
+.reveal ul li{ padding-left:1.1em; position:relative; margin-bottom:.4em; }
+.reveal ul li::before{ content:"▸"; color:var(--teal); position:absolute; left:0; font-weight:800; }
+.reveal .progress{ color:var(--teal); height:4px; }
+
+.reveal section.present h2{ animation:rise .6s ease both; }
+.reveal section.present .rule{ animation:growrule .9s .15s ease both; }
+.reveal section.present .cols .imgcard{ animation:rise .8s .2s ease both; }
+@keyframes rise{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:none;} }
+@keyframes growrule{ from{width:0;} to{width:100px;} }
+
+/* ============ FIXED CHROME ============ */
+.chrome{ position:fixed; inset:0; pointer-events:none; z-index:55; font-family:'Manrope',sans-serif; }
+.inst{ position:absolute; top:18px; left:26px; display:flex; align-items:center; gap:8px;
+  background:rgba(255,255,255,.94); border:1px solid var(--line); border-radius:999px;
+  padding:4px 14px 4px 6px; box-shadow:0 6px 18px rgba(13,44,84,.14); backdrop-filter:blur(8px); }
+.inst img{ height:28px; }
+.inst .t{ font-weight:800; color:var(--navy); font-size:10px; line-height:1.1; }
+.brand{ position:absolute; top:18px; right:26px; background:rgba(255,255,255,.94);
+  border:1px solid var(--line); border-radius:999px; padding:4px 12px;
+  box-shadow:0 6px 18px rgba(13,44,84,.14); backdrop-filter:blur(8px); }
+.brand img{ height:34px; display:block; }
+.foot{ position:absolute; bottom:14px; left:32px; font-size:10px; color:var(--muted); }
+.hint{ position:absolute; bottom:14px; right:32px; font-size:10px; color:var(--muted);
+  background:rgba(255,255,255,.9); border:1px solid var(--line); border-radius:999px; padding:3px 12px; }
+.hint b{ color:var(--teal); }
+
+/* ============ BUILDING BLOCKS ============ */
+.kicker{ font-size:.38em; letter-spacing:.3em; text-transform:uppercase; color:var(--teal); font-weight:800; margin-bottom:3px; }
+.grad-text{ background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.rule{ height:4px; width:100px; border-radius:3px; background:var(--grad); margin:5px 0 12px; }
+.center .rule{ margin:5px auto 12px; }
+.muted{ color:var(--muted); }
+.bignum{ font-family:'Fraunces',serif; font-weight:800; color:var(--lime); }
+.chip{ display:inline-block; margin:3px 5px 0 0; padding:4px 12px; border-radius:999px; background:#fff;
+  border:1px solid var(--line); font-size:.4em; font-weight:700; color:var(--navy);
+  box-shadow:0 4px 12px rgba(13,44,84,.08); }
+
+.stats{ display:flex; gap:10px; justify-content:center; margin-top:10px; }
+.stat{ background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:12px;
+  padding:8px 18px; box-shadow:0 8px 20px rgba(13,44,84,.10); }
+.stat .n{ font-family:'Fraunces',serif; font-weight:800; color:var(--navy); font-size:.95em; }
+.stat .l{ font-size:.38em; color:var(--muted); font-weight:700; letter-spacing:.04em; }
+
+.cols{ display:flex; gap:24px; align-items:center; }
+.cols .txt{ flex:1.15; }
+.cols .img{ flex:.85; }
+.imgcard{ border-radius:16px; overflow:hidden; border:1px solid var(--line);
+  box-shadow:0 18px 44px rgba(13,44,84,.18);
+  background:linear-gradient(135deg,rgba(30,136,229,.12),rgba(88,179,104,.12)); }
+.imgcard img{ width:100%; height:225px; object-fit:cover; display:block; }
+.imgcard.tall img{ height:270px; }
+.imgcard.small img{ height:150px; }
+.kb img{ animation:kenburns 16s ease-in-out infinite alternate; }
+@keyframes kenburns{ from{transform:scale(1);} to{transform:scale(1.1) translate(2%,-2%);} }
+.imgcap{ font-size:.38em; color:var(--muted); font-style:italic; margin-top:5px; }
+.noimg{ display:none; }
+
+/* ============ APP-PAGE COLLAGE (Product slide) ============ */
+.collage{ position:relative; height:300px; }
+.shot{ position:absolute; width:56%; background:#fff; border:1px solid var(--line);
+  border-radius:12px; padding:6px; box-shadow:0 16px 40px rgba(13,44,84,.24); }
+.shot img{ width:100%; height:150px; object-fit:cover; object-position:top; border-radius:8px; display:block; }
+.shot figcaption{ font-size:.4em; font-weight:800; color:var(--navy); text-align:center;
+  padding:4px 0 2px; letter-spacing:.1em; }
+.shot .ph{ display:none; height:150px; border-radius:8px; align-items:center; justify-content:center;
+  flex-direction:column; gap:6px; color:#fff; font-weight:800; font-size:.5em; letter-spacing:.12em; }
+.shot.s1{ left:0; top:4px; transform:rotate(-5deg); z-index:3; }
+.shot.s2{ right:0; top:34px; transform:rotate(4deg); z-index:2; }
+.shot.s3{ left:15%; bottom:0; transform:rotate(-2deg); z-index:4; }
+.shot.s1 .ph{ background:linear-gradient(135deg,#123c7a,#00897b); }
+.shot.s2 .ph{ background:linear-gradient(135deg,#00897b,#58b368); }
+.shot.s3 .ph{ background:linear-gradient(135deg,#0d2c54,#1e88e5); }
+
+.tiles{ display:flex; gap:10px; margin-top:5px; }
+.tile{ flex:1; background:var(--card); border:1px solid var(--line); border-top:4px solid var(--teal);
+  border-radius:12px; padding:10px 12px; box-shadow:0 10px 26px rgba(13,44,84,.08); font-size:.82em; }
+.tile.blue{ border-top-color:var(--blue); } .tile.green{ border-top-color:var(--green); }
+.tile.navy{ border-top-color:var(--navy); }
+.tile .num{ font-family:'Fraunces',serif; font-size:1.3em; font-weight:800; color:var(--navy); }
+.tile b{ color:var(--navy); }
+.tile ul{ margin-top:3px; } .tile ul li{ font-size:.92em; margin-bottom:.22em; }
+
+.flow{ display:flex; gap:4px; align-items:stretch; margin-top:10px; }
+.flow .step{ flex:1; background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:9px; font-size:.38em; box-shadow:0 8px 20px rgba(13,44,84,.07); }
+.flow .step b{ display:block; color:var(--navy); font-size:1.1em; margin-bottom:3px; }
+.flow .arr{ align-self:center; color:var(--teal); font-weight:800; font-size:.7em; }
+
+.reveal table{ border-collapse:collapse; width:100%; font-size:.44em; margin-top:5px; }
+.reveal th{ background:var(--navy); color:#fff; font-family:'Manrope'; font-weight:800; }
+.reveal th,.reveal td{ padding:7px 11px; border-bottom:1px solid var(--line); text-align:left; }
+.reveal tr:nth-child(even) td{ background:#f2f6fb; }
+
+.pill{ display:inline-block; padding:3px 11px; border-radius:999px; font-size:.75em; font-weight:800; }
+.pill.g{ background:#e6f4ea; color:#1e7e34; } .pill.a{ background:#fff4d6; color:#9a6b00; }
+.pill.r{ background:#fde8e8; color:#c0392b; }
+
+/* ============ TEAM ============ */
+.team{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:4px; }
+.member{ background:var(--card); border:1px solid var(--line); border-top:4px solid var(--teal);
+  border-radius:12px; padding:14px 10px 12px; text-align:center; box-shadow:0 8px 22px rgba(13,44,84,.08); }
+.member img{ width:84px; height:84px; border-radius:50%; object-fit:cover; display:block;
+  margin:0 auto 8px; border:3px solid #fff;
+  box-shadow:0 0 0 3px var(--teal), 0 10px 22px rgba(13,44,84,.18); }
+.member .name{ font-family:'Fraunces',serif; font-weight:800; color:var(--navy); font-size:.55em; line-height:1.2; }
+.member .reg{ font-size:.42em; color:var(--teal); font-weight:800; letter-spacing:.04em; margin-top:3px; }
+.member .role{ font-size:.42em; color:var(--muted); margin-top:3px; }
+.member:nth-child(1){ border-top-color:var(--blue); } .member:nth-child(1) img{ box-shadow:0 0 0 3px var(--blue), 0 10px 22px rgba(13,44,84,.18); }
+.member:nth-child(2){ border-top-color:var(--green); } .member:nth-child(2) img{ box-shadow:0 0 0 3px var(--green), 0 10px 22px rgba(13,44,84,.18); }
+.member:nth-child(3){ border-top-color:var(--navy); } .member:nth-child(3) img{ box-shadow:0 0 0 3px var(--navy), 0 10px 22px rgba(13,44,84,.18); }
+.member:nth-child(4){ border-top-color:var(--teal); }
+.sup{ display:flex; align-items:center; gap:14px; margin-top:12px;
+  background:linear-gradient(90deg,rgba(30,136,229,.08),rgba(0,137,123,.08),rgba(88,179,104,.10));
+  border:1px solid var(--line); border-radius:12px; padding:9px 18px; }
+.sup img{ height:42px; } .sup div{ font-size:.48em; color:var(--ink); } .sup b{ color:var(--navy); }
+
+.title-logo{ height:140px; margin-bottom:4px; filter:drop-shadow(0 10px 30px rgba(13,44,84,.25)); }
+.tagline{ font-size:.72em; color:var(--muted); font-weight:700; }
+
+code{ background:rgba(0,137,123,.12); padding:2px 6px; border-radius:4px; color:var(--navy); font-size:.9em; }
+</style>
+</head>
+
+<body>
+
+<div class="chrome">
+  <div class="inst"><img src="ouk.png" alt="Open University of Kenya"><span class="t">Open University<br>of Kenya</span></div>
+  <div class="brand"><img src="logo.png" alt="BizFlow360"></div>
+  <div class="foot">Team Maridex · Open University of Kenya · BSc Data Science · August 2026</div>
+  <div class="hint">Navigate with <b>←</b> / <b>→</b> keys</div>
+</div>
+
+<div class="reveal"><div class="slides">
+
+<!-- 1 · TITLE -->
+<section class="center titleslide" data-transition="zoom">
+  <img class="title-logo" src="logo.png" alt="BizFlow360 logo">
+  <h1>BizFlow<span class="grad-text">360</span></h1>
+  <p class="tagline">Financial clarity for every MSME.</p>
+  <p class="muted">A Machine-Learning Early-Warning System for Predicting Financial Distress among Kenyan MSMEs</p>
+  <div class="stats">
+    <div class="stat fragment zoom-in"><div class="n">15,815</div><div class="l">REAL KNBS MSME RECORDS</div></div>
+    <div class="stat fragment zoom-in"><div class="n">74.6%</div><div class="l">DISTRESS RECALL @ τ=0.33</div></div>
+    <div class="stat fragment zoom-in"><div class="n">10</div><div class="l">AI ACTIONS PER REPORT</div></div>
+  </div>
+  <div>
+    <span class="chip">Team Maridex</span><span class="chip">Open University of Kenya</span>
+    <span class="chip">Supervisor: Dr. Irene Sitawa</span><span class="chip">August 2026</span>
+  </div>
+  <p class="muted" style="font-size:.4em; margin-top:8px">BSc Data Science · Capstone Defence · Nairobi, Kenya</p>
+</section>
+
+<!-- 2 · AGENDA -->
+<section>
+  <div class="cols">
+    <div class="txt">
+      <div class="kicker">Roadmap</div><h2>Our story in six parts</h2><div class="rule"></div>
+      <ul>
+        <li class="fragment fade-up"><b>Problem</b> — MSMEs fail silently; no early warning.</li>
+        <li class="fragment fade-up"><b>Answer</b> — predict · explain · advise.</li>
+        <li class="fragment fade-up"><b>Method</b> — KNBS data, 23 features, honest ML.</li>
+        <li class="fragment fade-up"><b>Results</b> — v1 → v2 → v2.1, calibrated & validated.</li>
+        <li class="fragment fade-up"><b>Product</b> — live app, SHAP, AI plans, PDF.</li>
+        <li class="fragment fade-up"><b>Proof & future</b> — validation, ethics, next steps.</li>
+      </ul>
+    </div>
+    <div class="img">
+      <div class="imgcard kb fragment fade-left"><img src="https://image.qwenlm.ai/public_source/f64408c1-4def-4332-891b-051d54fd3e7d/434c64b6f-2df2-4b7e-aee3-2297496240f04975.png" alt="Maasai herder with cattle at sunset, Kenya" onerror="this.parentElement.classList.add('noimg')"></div>
+      <div class="imgcap">One team, one mission — built for Kenya.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · PROBLEM -->
+<section>
+  <div class="cols">
+    <div class="txt">
+      <div class="kicker">The Problem</div><h2>Kenya's engine flies blind</h2><div class="rule"></div>
+      <ul>
+        <li class="fragment fade-up">MSMEs employ <b>most of Kenya's workforce</b> — yet fail silently.</li>
+        <li class="fragment fade-up">No records, thin buffers, <b>no early warning</b> of distress.</li>
+        <li class="fragment fade-up">Lenders can't assess risk → <b>credit exclusion</b>.</li>
+        <li class="fragment fade-up">Existing tools serve <b>big firms</b> — not the duka, kibanda, shamba.</li>
+      </ul>
+      <p class="fragment fade-up" style="margin-top:8px"><span class="pill r">Gap</span> &nbsp;No accessible, explainable early-warning system for Kenyan MSMEs.</p>
+    </div>
+    <div class="img">
+      <div class="imgcard tall kb fragment fade-left"><img src="https://image.qwenlm.ai/public_source/f64408c1-4def-4332-891b-051d54fd3e7d/134c64b6f-2df2-4b7e-aee3-2297496240f07721.png" alt="Mama mboga at her banana stall, Kenya" onerror="this.parentElement.classList.add('noimg')"></div>
+      <div class="imgcap">The duka, the kibanda, the shamba — Kenya's real economy.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · OUR ANSWER -->
+<section>
+  <div class="kicker">Our Answer</div><h2>Not just a verdict — a co-pilot</h2><div class="rule"></div>
+  <div class="tiles">
+    <div class="tile blue fragment zoom-in"><b>1 · PREDICT</b><br>Calibrated LightGBM distress score (0–100%) on real KNBS data.</div>
+    <div class="tile fragment zoom-in"><b>2 · EXPLAIN</b><br>SHAP waterfall shows <i>exactly why</i> — fully transparent.</div>
+    <div class="tile green fragment zoom-in"><b>3 · ADVISE</b><br>Break-even math + NVIDIA AI → 10 tailored actions + PDF.</div>
+  </div>
+  <div class="cols" style="margin-top:10px">
+    <div class="txt"><p class="fragment fade-up muted">Wrapped in a WhatsApp-style chat, history tracking, and a mobile-friendly Streamlit app — as familiar as M-Pesa.</p></div>
+    <div class="img"><div class="imgcard small kb fragment fade-left"><img src="https://image.qwenlm.ai/public_source/f64408c1-4def-4332-891b-051d54fd3e7d/034c64b6f-2df2-4b7e-aee3-2297496240f08817.png" alt="M-Pesa menu on a phone in Kenya" onerror="this.parentElement.classList.add('noimg')"></div></div>
+  </div>
+</section>
+
+<!-- 5 · OBJECTIVES & RQs -->
+<section>
+  <div class="kicker">Foundations</div><h2>What we set out to prove</h2><div class="rule"></div>
+  <div class="tiles">
+    <div class="tile navy fragment fade-up" style="flex:1.15">
+      <b>Objectives</b>
+      <ul style="font-size:.9em">
+        <li>Identify key distress indicators</li>
+        <li>Build distressed / stable classifiers</li>
+        <li>Compare LR · RF · XGBoost · LightGBM</li>
+        <li>Evaluate: Acc · Prec · Rec · F1 · ROC-AUC</li>
+        <li>Deploy an accessible dashboard</li>
+      </ul>
+    </div>
+    <div class="tile green fragment fade-up">
+      <b>Research questions</b>
+      <ul style="font-size:.9em">
+        <li>Which indicators predict distress?</li>
+        <li>Which model performs best?</li>
+        <li>Do ensembles beat the baseline?</li>
+        <li>Can we deploy accessibly?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · PIPELINE -->
+<section>
+  <div class="kicker">Method</div><h2>One pipeline, data to advice</h2><div class="rule"></div>
+  <div class="flow">
+    <div class="step fragment fade-up"><b>Data</b>KNBS MSME survey · 15,815 records</div><div class="arr">→</div>
+    <div class="step fragment fade-up"><b>Clean</b>placeholders → NaN · impute · clip</div><div class="arr">→</div>
+    <div class="step fragment fade-up"><b>Engineer</b>23 features · ratios & flags</div><div class="arr">→</div>
+    <div class="step fragment fade-up"><b>Train</b>LightGBM · 80/20 stratified</div><div class="arr">→</div>
+    <div class="step fragment fade-up"><b>Calibrate</b>Platt sigmoid · τ = 0.33</div><div class="arr">→</div>
+    <div class="step fragment fade-up"><b>Ship</b>SHAP + AI advice · Streamlit</div>
+  </div>
+  <p class="fragment fade-up muted" style="margin-top:10px">Target: <b>0 = stable · 1 = distressed</b> (KNBS self-reported business performance).</p>
+</section>
+
+<!-- 7 · HONEST ML -->
+<section>
+  <div class="kicker">Scientific Rigour</div><h2>We audited our own model — and fixed it</h2><div class="rule"></div>
+  <ul>
+    <li class="fragment fade-up"><b>v1.0 cheated:</b> profit features ≈ the answer key <i>(target leakage)</i> — AUC .70 but invalid.</li>
+    <li class="fragment fade-up"><b>v2.0 got honest:</b> leakage-safe features + calibration → <i>true probabilities</i> (Brier .206).</li>
+    <li class="fragment fade-up"><b>v2.1 got useful:</b> robust ratios + tuning + τ = 0.33 → recall <b>28% → 75%</b>.</li>
+  </ul>
+  <p class="fragment fade-up" style="margin-top:10px"><span class="pill g">Principle</span> &nbsp;Honest first, then useful — never impressive-but-wrong.</p>
+</section>
+
+<!-- 8 · RESULTS -->
+<section data-transition="convex">
+  <div class="kicker">Results</div><h2>v2.1 in four numbers</h2><div class="rule"></div>
+  <div class="tiles">
+    <div class="tile blue fragment zoom-in"><div class="num">0.696</div>ROC-AUC<br><span class="muted">95% CI 0.676–0.714</span></div>
+    <div class="tile green fragment zoom-in"><div class="num">74.6%</div>Recall @ τ=0.33<br><span class="muted">catches distressed MSMEs</span></div>
+    <div class="tile fragment zoom-in"><div class="num">0.206</div>Brier score<br><span class="muted">calibrated probabilities</span></div>
+    <div class="tile navy fragment zoom-in"><div class="num">≥33%</div>Review threshold<br><span class="muted">safe error direction</span></div>
+  </div>
+  <p class="fragment fade-up muted" style="margin-top:8px">Precision 0.465 · F1 0.573 · n = 3,163 test records · bootstrap CIs reported.</p>
+</section>
+
+<!-- 9 · THRESHOLD -->
+<section>
+  <div class="kicker">A Product Decision</div><h2>Why we moved the threshold to 0.33</h2><div class="rule"></div>
+  <div class="tiles">
+    <div class="tile navy fragment zoom-in"><div class="num">28%</div>recall at 0.5<br><span class="muted">misses 7 of 10 distressed firms</span></div>
+    <div class="tile green fragment zoom-in"><div class="num">75%</div>recall at 0.33<br><span class="muted">false positive = extra advice (cheap)</span></div>
+  </div>
+  <ul>
+    <li class="fragment fade-up" style="margin-top:8px"><b>False negative</b> = a distressed business told "you're fine" — the dangerous error.</li>
+    <li class="fragment fade-up">We deliberately bias toward <b>catching</b> distress early.</li>
+  </ul>
+</section>
+
+<!-- 10 · SHAP -->
+<section>
+  <div class="kicker">Explainability</div><h2>Every score comes with a "why"</h2><div class="rule"></div>
+  <div class="tiles">
+    <div class="tile blue fragment fade-up" style="flex:1.1">
+      <b>SHAP waterfall per user</b>
+      <ul>
+        <li>Red bars push risk up · blue bars pull it down</li>
+        <li>Plain-language meaning cards per driver</li>
+        <li>No black boxes — owners act on the <i>cause</i></li>
+      </ul>
+    </div>
+    <div class="tile green fragment fade-up">
+      <b>Example — Baringo farm, 35.2% Low</b>
+      <ul>
+        <li>Male owners <b>−0.266</b></li>
+        <li>Revenue change <b>−0.241</b></li>
+        <li>Expenses <b>+0.202</b></li>
+        <li>Revenue last month <b>−0.184</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · PRODUCT (collage of YOUR app pages) -->
+<section>
+  <div class="kicker">The Product</div><h2>Five pages, one co-pilot</h2><div class="rule"></div>
+  <div class="cols">
+    <div class="txt">
+      <ul>
+        <li class="fragment fade-up"><b>Analyze:</b> 4 tabs — Why · Numbers · Actions · AI.</li>
+        <li class="fragment fade-up"><b>History:</b> risk trend + AI comparison over months.</li>
+        <li class="fragment fade-up"><b>Chat:</b> WhatsApp-style · reads receipts & photos.</li>
+        <li class="fragment fade-up"><b>Human UX:</b> "Duka, Mama Mboga" labels; model gets exact ISIC codes.</li>
+        <li class="fragment fade-up"><b>PDF:</b> one click → branded report with badge, SHAP, 10 actions.</li>
+      </ul>
+    </div>
+    <div class="img">
+      <div class="collage fragment zoom-in">
+        <figure class="shot s1">
+          <div class="ph">📊<br>ANALYZE</div>
+          <img src="shots/analyze.png" alt="BizFlow360 Analyze page" onerror="this.style.display='none';this.parentElement.querySelector('.ph').style.display='flex'">
+          <figcaption>ANALYZE</figcaption>
+        </figure>
+        <figure class="shot s2">
+          <div class="ph">💬<br>CHAT</div>
+          <img src="shots/chat.png" alt="BizFlow360 Chat page" onerror="this.style.display='none';this.parentElement.querySelector('.ph').style.display='flex'">
+          <figcaption>CHAT</figcaption>
+        </figure>
+        <figure class="shot s3">
+          <div class="ph">📄<br>PDF REPORT</div>
+          <img src="shots/report.png" alt="BizFlow360 PDF report" onerror="this.style.display='none';this.parentElement.querySelector('.ph').style.display='flex'">
+          <figcaption>PDF REPORT</figcaption>
+        </figure>
+      </div>
+      <div class="imgcap">Live pages of the BizFlow360 app — Analyze · Chat · PDF.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · ADVICE -->
+<section>
+  <div class="kicker">Advice Grounded in Your Numbers</div><h2>From score to shillings</h2><div class="rule"></div>
+  <div class="cols">
+    <div class="txt">
+      <div class="tiles" style="flex-direction:column">
+        <div class="tile navy fragment fade-right"><div class="num">KES 15,000</div> monthly deficit — <span class="muted">30k revenue vs 45k expenses</span></div>
+        <div class="tile blue fragment fade-right"><div class="num">KES 45,000</div> break-even revenue — <span class="muted">expenses constant</span></div>
+        <div class="tile green fragment fade-right"><div class="num">10</div> AI actions, sector-tailored — <span class="muted">evidence-locked</span></div>
+      </div>
+    </div>
+    <div class="img">
+      <div class="imgcard tall kb fragment fade-left"><img src="https://image.qwenlm.ai/public_source/f64408c1-4def-4332-891b-051d54fd3e7d/234c64b6f-2df2-4b7e-aee3-2297496240f05333.png" alt="Young herder with cattle in drylands, Kenya" onerror="this.parentElement.classList.add('noimg')"></div>
+      <div class="imgcap">Every recommendation traces to the owner's own figures.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 · VALIDATION -->
+<section>
+  <div class="kicker">Validation</div><h2>Does the engine think like an analyst?</h2><div class="rule"></div>
+  <table>
+    <tr><th>Scenario</th><th>Expected</th><th>Actual (v2.1)</th><th>Verdict</th></tr>
+    <tr class="fragment"><td>Healthy retail — Nairobi</td><td>Low</td><td>37.3% Low</td><td><span class="pill g">✅ Pass</span></td></tr>
+    <tr class="fragment"><td>Collapsing eatery — Marsabit</td><td>High</td><td>40.0% Medium</td><td><span class="pill a">⚠️ Flagged + Critical actions</span></td></tr>
+    <tr class="fragment"><td>Stable w/ closure — Kisumu</td><td>Medium</td><td>32.9% Low</td><td><span class="pill a">⚠️ Borderline, explained</span></td></tr>
+    <tr class="fragment"><td>Thin-margin farm — Kajiado</td><td>Medium</td><td>53.6% Medium</td><td><span class="pill g">✅ Pass</span></td></tr>
+  </table>
+  <p class="fragment fade-up muted" style="margin-top:6px">Deviations are transparent, SHAP-explainable, and conservative in the safe direction.</p>
+</section>
+
+<!-- 14 · LIVE DEMO -->
+<section class="darkbg" data-transition="zoom">
+  <div class="cols">
+    <div class="txt" style="text-align:left">
+      <div class="kicker">Live Demo</div>
+      <h2 style="font-size:1.5em">See it working</h2>
+      <div class="rule"></div>
+      <p style="font-size:.9em" class="bignum">bizflow360-playground.streamlit.app</p>
+      <p class="muted">Analyze → SHAP → 10 AI actions → PDF · Chat with a receipt</p>
+    </div>
+    <div class="img">
+      <div class="imgcard tall kb fragment zoom-in"><img src="https://image.qwenlm.ai/public_source/f64408c1-4def-4332-891b-051d54fd3e7d/134c64b6f-2df2-4b7e-aee3-2297496240f08079.png" alt="Nairobi Westlands skyline" onerror="this.parentElement.classList.add('noimg')"></div>
+      <div class="imgcap" style="color:#b9c8e0">Live from the cloud — built in Nairobi spirit.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 · ENGINEERING -->
+<section>
+  <div class="kicker">Engineering</div><h2>Built like a real product</h2><div class="rule"></div>
+  <ul>
+    <li class="fragment fade-up"><b>GitHub:</b> github.com/M-aridex/BizFlow360 — code, notebooks, docs, artifacts.</li>
+    <li class="fragment fade-up"><b>Deployed:</b> Streamlit Community Cloud, branch <code>main</code>.</li>
+    <li class="fragment fade-up"><b>Secrets:</b> key in Streamlit Secrets — never in code; rotated after exposure.</li>
+    <li class="fragment fade-up"><b>Reproducible:</b> fixed seeds, versioned artifacts, documented pipeline.</li>
+  </ul>
+</section>
+
+<!-- 16 · ETHICS (now with image) -->
+<section>
+  <div class="kicker">Ethics & Compliance</div><h2>Responsible by design</h2><div class="rule"></div>
+  <div class="cols">
+    <div class="txt">
+      <div class="tiles" style="flex-direction:column">
+        <div class="tile blue fragment fade-right"><b>Privacy</b> — No PII · anonymized KNBS data · history on-device only · Kenya DPA 2019.</div>
+        <div class="tile fragment fade-right"><b>Fairness</b> — County/sector baselines visible via SHAP · gender monitored · documented.</div>
+        <div class="tile green fragment fade-right"><b>Honesty</b> — Calibrated scores · disclaimers everywhere · support, never binding advice.</div>
+      </div>
+    </div>
+    <div class="img">
+      <div class="imgcard tall kb fragment fade-left"><img src="https://image.qwenlm.ai/public_source/f64408c1-4def-4332-891b-051d54fd3e7d/134c64b6f-2df2-4b7e-aee3-2297496240f09429.png" alt="Kenya map with mobile money illustration" onerror="this.parentElement.classList.add('noimg')"></div>
+      <div class="imgcap">Kenya-first: the data stays with the owner.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 17 · LIMITS & FUTURE -->
+<section>
+  <div class="kicker">Ahead</div><h2>Where BizFlow360 goes next</h2><div class="rule"></div>
+  <div class="cols">
+    <div class="txt">
+      <div class="tiles" style="flex-direction:column">
+        <div class="tile navy fragment fade-right"><b>Limitations</b>
+          <ul style="font-size:.9em"><li>Self-reported survey data · moderate AUC (0.696)</li><li>Advisor needs internet · no "when", only current status</li></ul>
+        </div>
+        <div class="tile green fragment fade-right"><b>Future work</b>
+          <ul style="font-size:.9em"><li>M-Pesa transaction data · time-to-distress forecasting</li><li>Sector-specific models · usability studies with real MSMEs</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="img">
+      <div class="imgcard tall kb fragment fade-left"><img src="https://image.qwenlm.ai/public_source/f64408c1-4def-4332-891b-051d54fd3e7d/434c64b6f-2df2-4b7e-aee3-2297496240f04811.png" alt="Acacia tree at sunset on the Kenyan savanna" onerror="this.parentElement.classList.add('noimg')"></div>
+      <div class="imgcap">The road ahead — from the shamba to the sokoni.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 18 · CONCLUSION -->
+<section class="darkbg" data-transition="convex">
+  <div class="kicker">Conclusion</div>
+  <h2>One honest, explainable, accessible<br>early-warning co-pilot</h2><div class="rule"></div>
+  <ul>
+    <li class="fragment fade-up">Real KNBS data → calibrated LightGBM v2.1 (AUC 0.696, recall 74.6%).</li>
+    <li class="fragment fade-up">SHAP + break-even math + generative AI → <b>actionable</b> clarity.</li>
+    <li class="fragment fade-up">Deployed, documented, ethically governed — ready for Kenya's MSMEs.</li>
+  </ul>
+  <p class="fragment fade-up" style="margin-top:10px; font-size:.7em"><span class="grad-text" style="font-weight:800">Financial clarity for every MSME.</span></p>
+</section>
+
+<!-- 19 · TEAM -->
+<section>
+  <div class="kicker">Team Maridex</div><h2>The people behind BizFlow360</h2><div class="rule"></div>
+  <div class="team">
+    <div class="member fragment fade-up">
+      <img src="edusei.png" alt="Edusei Mikel Lisamba" onerror="this.style.display='none'">
+      <div class="name">Edusei Mikel Lisamba</div>
+      <div class="reg">ST01/0149/2026 · GROUP LEADER</div>
+      <div class="role">Team Leader · ML Integration Lead</div>
+    </div>
+    <div class="member fragment fade-up">
+      <img src="marion.png" alt="Marion Muthoni Mwendwa" onerror="this.style.display='none'">
+      <div class="name">Marion Muthoni Mwendwa</div>
+      <div class="reg">ST01/0144/2025</div>
+      <div class="role">Research, Documentation & Ethics Lead</div>
+    </div>
+    <div class="member fragment fade-up">
+      <img src="yvette.png" alt="Yvette Akinyi Odeny" onerror="this.style.display='none'">
+      <div class="name">Yvette Akinyi Odeny</div>
+      <div class="reg">ST01/33452/2025</div>
+      <div class="role">MVP, Deployment & Presentation Lead</div>
+    </div>
+    <div class="member fragment fade-up">
+      <img src="denis.png" alt="Mutua Denis Mutio" onerror="this.style.display='none'">
+      <div class="name">Mutua Denis Mutio</div>
+      <div class="reg">ST01/0046/2025</div>
+      <div class="role">Data Engineering & EDA Lead</div>
+    </div>
+  </div>
+  <div class="sup fragment fade-up">
+    <img src="ouk.png" alt="Open University of Kenya">
+    <div><b>Open University of Kenya</b> · BSc Data Science<br>Supervised by <b>Dr. Irene Sitawa</b></div>
+  </div>
+</section>
+
+<!-- 20 · Q&A -->
+<section class="center" data-transition="zoom">
+  <img class="title-logo" src="logo.png" alt="BizFlow360 logo" style="height:130px">
+  <h2>Thank you — <span class="grad-text">questions?</span></h2>
+  <div class="rule"></div>
+  <p class="muted">bizflow360-playground.streamlit.app · github.com/M-aridex/BizFlow360</p>
+  <p class="muted" style="font-size:.42em">Team Maridex · Open University of Kenya · August 2026</p>
+</section>
+
+</div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+document.querySelectorAll('.reveal .slides section').forEach(function(s){
+  var r = document.createElement('div'); r.className = 'ring'; s.prepend(r);
+});
+
+Reveal.initialize({
+  hash: true,
+  controls: false,
+  keyboard: true,
+  navigationMode: 'linear',
+  progress: true,
+  center: true,
+  transition: 'slide',
+  transitionSpeed: 'default',
+  backgroundTransition: 'fade',
+  slideNumber: 'c/t',
+  width: 1280, height: 720, margin: 0.06, minScale: 0.2, maxScale: 2.0
+});
+</script>
+</body>
+</html>

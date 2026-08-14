@@ -6,10 +6,11 @@ This folder contains all documentation for BizFlow360.
 
 - `proposal/` - Chapters 1-3 (Introduction, Literature Review, Methodology)
 - `literature/` - Academic papers and research gap analysis
-- `final_report/` - Chapters 4-6 (Implementation, Results, Conclusion)
+- `final_report/` - Chapters 4-5 (Implementation, Results, Conclusion)
 - `presentation/` - Slides and demo scripts
 - `ethics/` - KDPA compliance and consent forms
 - `user_manual/` - How to use the app
+- `user_manual/screenshots` - Proofs based on real world examples
 
 ## Owner
 📚 Marion Muthoni Mwenda (ST01/0144/2025)
