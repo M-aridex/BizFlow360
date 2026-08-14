@@ -2,13 +2,14 @@
   <img src="logo-1.png" alt="BizFlow360 Logo" width="250"/>
   <h1>BizFlow360</h1>
   <p><em>Financial clarity for every MSME.</em></p>
-</div>
 
 **A Machine Learning-Based Early Warning System for Predicting Financial Distress Among Kenyan MSMEs**
 
 ![Team Maridex](https://img.shields.io/badge/Team-Maridex-blue)
 ![Status](https://img.shields.io/badge/Status-Active-green)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+
+</div>
 
 ---
 
